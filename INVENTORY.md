@@ -5,6 +5,16 @@
 - **✅ 저장소 포함**: 이 저장소 폴더를 `~/.claude/skills/`에 복사하면 끝
 - **🔗 원본에서 설치**: 라이선스가 없거나 플러그인·프로그램이라 원본 링크에서 직접 설치
 
+## 한눈에 보기 (2026-10-26 확인)
+
+| 구분 | 개수 | 저장소에 포함 |
+|---|---|---|
+| 개인 스킬 | 16개 (`synced` 제외) | 10개 ✅ · 6개 🔗 |
+| 플러그인 — 모든 프로젝트 | 7개 (스킬 약 190개) | 🔗 마켓플레이스에서 설치 |
+| 플러그인 — 특정 프로젝트 | 4개 | 🔗 |
+| MCP 서버 (직접 등록) | 2개 (earshot, REA) + 플러그인 MCP 2개 (blender, cad) | 🔗 |
+| 참고용 AI 도구 | 50여 개 | 설치 안 함 |
+
 명령은 Git Bash 기준입니다. 플러그인 명령은 Claude Code 안에서 `/plugin ...`으로 실행해도 됩니다.
 
 ---
@@ -53,19 +63,19 @@ curl -sL -o ~/.claude/skills/arena/SKILL.md https://raw.githubusercontent.com/cu
 
 ### 모든 프로젝트 (user 범위)
 
-| 플러그인 | 하는 일 | 마켓플레이스 저장소 | 설치 |
-|---|---|---|---|
-| gamedev | Godot·Unity·Unreal·Roblox 등 게임 개발 스킬 90여 개 | [gamedev-skills/awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) | `claude plugin marketplace add gamedev-skills/awesome-gamedev-agent-skills` → `claude plugin install gamedev@awesome-gamedev-agent-skills` |
-| blender-skills | Blender 테크니컬 아트 스킬 94개 (director가 자동 라우팅, Blender MCP로 직접 조작) | [arjun988/blender-skills](https://github.com/arjun988/blender-skills) (MIT) | `claude plugin marketplace add arjun988/blender-skills` → `claude plugin install blender-skills@blender-skills --scope user` · Blender + [BlenderMCP 애드온](https://github.com/ahujasid/blender-mcp) 필요 |
-| text-to-cad | 파라메트릭 CAD, STEP/STL/DXF, 3D 프린팅 슬라이스 (MCP 포함) | [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | `claude plugin marketplace add earthtojake/text-to-cad#latest` → `claude plugin install text-to-cad@earthtojake` → `uvx cadgen telemetry off` |
-| imozuru | 모르는 분야를 용어·사람·원문 순으로 파고드는 리서치 | [MaryCache/imozuru](https://github.com/MaryCache/imozuru) | `claude plugin marketplace add MaryCache/imozuru` → `claude plugin install imozuru@imozuru` |
-| watch | 영상 URL을 받아 프레임·자막으로 내용 파악 | [bradautomates/claude-video](https://github.com/bradautomates/claude-video) | `claude plugin marketplace add bradautomates/claude-video` → `claude plugin install watch@claude-video` |
-| ifixai | AI 진단 도구 | [ifixai-ai/iFixAi](https://github.com/ifixai-ai/iFixAi) | `claude plugin marketplace add ifixai-ai/iFixAi` → `claude plugin install ifixai@ifixai-community` |
-| typesafe | 타입이 있는 AI 판단 프리미티브로 기능 만들기 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | `claude plugin marketplace add typesafe-ai/skills` → `claude plugin install typesafe@typesafe-ai` |
+| 플러그인 | 버전 · 설치일 | 하는 일 | 마켓플레이스 저장소 | 설치 |
+|---|---|---|---|---|
+| blender-skills | v1.3.0 · 10-26 | Blender 테크니컬 아트 스킬 94개. director가 자동 라우팅하고 Blender MCP로 직접 조작 | [arjun988/blender-skills](https://github.com/arjun988/blender-skills) (MIT) | `claude plugin marketplace add arjun988/blender-skills` → `claude plugin install blender-skills@blender-skills --scope user` · Blender + [BlenderMCP 애드온](https://github.com/ahujasid/blender-mcp) 필요 |
+| imozuru | ecb82c7 · 10-23 | 모르는 분야를 용어·사람·원문 순으로 파고드는 리서치 | [MaryCache/imozuru](https://github.com/MaryCache/imozuru) | `claude plugin marketplace add MaryCache/imozuru` → `claude plugin install imozuru@imozuru` |
+| gamedev | 0a70cfc · 10-20 | Godot·Unity·Unreal·Roblox 등 게임 개발 스킬 75개 | [gamedev-skills/awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) | `claude plugin marketplace add gamedev-skills/awesome-gamedev-agent-skills` → `claude plugin install gamedev@awesome-gamedev-agent-skills` |
+| text-to-cad | v0.7.24 · 10-20 | 파라메트릭 CAD, STEP/STL/DXF, 도면, 3D 프린팅 슬라이스 (스킬 12개 + cad MCP) | [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | `claude plugin marketplace add earthtojake/text-to-cad#latest` → `claude plugin install text-to-cad@earthtojake` → `uvx cadgen telemetry off` |
+| ifixai | v0.2.0 · 10-20 | AI 진단 도구 (API 비용 발생) | [ifixai-ai/iFixAi](https://github.com/ifixai-ai/iFixAi) | `claude plugin marketplace add ifixai-ai/iFixAi` → `claude plugin install ifixai@ifixai-community` |
+| watch | v0.3.2 · 10-13 | 영상 URL을 받아 프레임·자막으로 내용 파악 | [bradautomates/claude-video](https://github.com/bradautomates/claude-video) | `claude plugin marketplace add bradautomates/claude-video` → `claude plugin install watch@claude-video` |
+| typesafe | v0.5.7 · 10-13 | 타입이 있는 AI 판단 프리미티브로 기능 만들기 | [typesafe-ai/skills](https://github.com/typesafe-ai/skills) | `claude plugin marketplace add typesafe-ai/skills` → `claude plugin install typesafe@typesafe-ai` |
 
 ### 특정 프로젝트에만 설치된 것 (Anthropic 공식 마켓플레이스)
 
-원래 `orca/workspaces/new/master-2` 프로젝트에만 설치돼 있습니다. 새 PC에서는 아래처럼 user 범위로 설치해도 됩니다.
+원래 `orca/workspaces/new/master-2` 프로젝트에만 설치돼 있습니다(2026-10-10 설치, playwright는 local 범위). 새 PC에서는 아래처럼 user 범위로 설치해도 됩니다.
 
 | 플러그인 | 하는 일 | 설치 |
 |---|---|---|
