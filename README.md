@@ -2,6 +2,8 @@
 
 Claude Code 개인 스킬 모음입니다. 폴더 하나가 스킬 하나이고, `~/.claude/skills/` 아래에 두면 Claude Code가 인식합니다.
 
+플러그인, MCP 서버, 참고용 AI 도구까지 포함한 **전체 목록과 설치 링크는 [INVENTORY.md](INVENTORY.md)** 에 있습니다.
+
 ## 새 PC에 설치
 
 ```bash
