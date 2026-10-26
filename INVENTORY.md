@@ -9,10 +9,10 @@
 
 | 구분 | 개수 | 저장소에 포함 |
 |---|---|---|
-| 개인 스킬 | 16개 (`synced` 제외) | 10개 ✅ · 6개 🔗 |
-| 플러그인 — 모든 프로젝트 | 9개 (스킬 약 190개 + 직접 만든 mod 2개) | 🔗 마켓플레이스에서 설치 |
+| 개인 스킬 | 17개 (`synced` 제외) | 11개 ✅ · 6개 🔗 |
+| 플러그인 — 모든 프로젝트 | 10개 (스킬 약 190개 + 직접 만든 mod 2개) | 🔗 마켓플레이스에서 설치 |
 | 플러그인 — 특정 프로젝트 | 4개 | 🔗 |
-| MCP 서버 (직접 등록) | 2개 (earshot, REA) + 플러그인 MCP 2개 (blender, cad) | 🔗 |
+| MCP 서버 (직접 등록) | 3개 (earshot, REA, Vibe-Trading) + 플러그인 MCP 2개 (blender, cad) | 🔗 |
 | 파이썬 패키지 (직접 설치) | 8개 + earshot 가상환경 | 🔗 `pip install` |
 | 참고용 AI 도구 | 50여 개 | 설치 안 함 |
 
@@ -31,6 +31,7 @@
 | harness-creator | ✅ | 에이전트 하네스 파일 생성·점수 평가 | [walkinglabs/learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering) (MIT) |
 | harness-checklist | ✅ | 강의 기반 단계별 하네스 체크리스트 (직접 만듦) | [강의 한국어판](https://walkinglabs.github.io/learn-harness-engineering/ko/) (MIT) |
 | xvary-stock-research | ✅ | 미국 주식 `/analyze` `/score` `/compare` | [xvary-research/claude-code-stock-analysis-skill](https://github.com/xvary-research/claude-code-stock-analysis-skill) (MIT) |
+| vibe-trading | ✅ 스킬 문서만 | 백테스트·팩터·알파 478개·옵션·매매일지 분석 금융 툴킷. 본체(MCP)는 아래 3장 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) (MIT) |
 | codebase-to-course | 🔗 | 코드베이스를 비개발자용 인터랙티브 강의로 | [zarazhangrui/codebase-to-course](https://github.com/zarazhangrui/codebase-to-course) |
 | teach-me | 🔗 | 1:1 AI 튜터 (수준 진단, 질문식 수업) | [claude-code-best/claude-code · teach-me](https://github.com/claude-code-best/claude-code/tree/main/.claude/skills/teach-me) |
 | arena | 🔗 | 여러 모델 답을 비교 (Cursor pstack 원본) | [cursor/plugins · pstack/skills/arena](https://github.com/cursor/plugins/tree/main/pstack/skills/arena) |
@@ -66,6 +67,7 @@ curl -sL -o ~/.claude/skills/arena/SKILL.md https://raw.githubusercontent.com/cu
 
 | 플러그인 | 버전 · 설치일 | 하는 일 | 마켓플레이스 저장소 | 설치 |
 |---|---|---|---|---|
+| last30days | v3.30.0 · 10-26 | Reddit·X·YouTube·Polymarket 등에서 최근 30일 여론 조사 (`/last30days 주제`) | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) (MIT) | `claude plugin marketplace add mvanhorn/last30days-skill` → `claude plugin install last30days@last30days-skill --scope user` |
 | ollama-status · crypto-ticker | v0.1.0 · 10-26 | 직접 만든 상태줄 mod: Ollama 모델·VRAM (`/ollama`), BTC·ETH·SOL·XRP 원화 시세 (`/coin`) | 로컬 폴더 `C:\Users\403\claude-mods` (마켓플레이스 `my-mods`) | `claude plugin marketplace add <claude-mods 폴더>` → `claude plugin install ollama-status@my-mods --scope user`, `crypto-ticker@my-mods` 동일 |
 | blender-skills | v1.3.0 · 10-26 | Blender 테크니컬 아트 스킬 94개. director가 자동 라우팅하고 Blender MCP로 직접 조작 | [arjun988/blender-skills](https://github.com/arjun988/blender-skills) (MIT) | `claude plugin marketplace add arjun988/blender-skills` → `claude plugin install blender-skills@blender-skills --scope user` · Blender + [BlenderMCP 애드온](https://github.com/ahujasid/blender-mcp) 필요 |
 | imozuru | ecb82c7 · 10-23 | 모르는 분야를 용어·사람·원문 순으로 파고드는 리서치 | [MaryCache/imozuru](https://github.com/MaryCache/imozuru) | `claude plugin marketplace add MaryCache/imozuru` → `claude plugin install imozuru@imozuru` |
@@ -96,6 +98,7 @@ curl -sL -o ~/.claude/skills/arena/SKILL.md https://raw.githubusercontent.com/cu
 |---|---|---|---|
 | earshot | 오디오 듣기 MCP (CPU, 모델 약 1.1GB, Python 3.10+, ffmpeg) | [Leonxlnx/earshot](https://github.com/Leonxlnx/earshot) | 아래 명령 |
 | REA | 리버스 엔지니어링 MCP + `reverse-engineer-anything` 스킬 (Node.js) | [morluto/rea](https://github.com/morluto/rea) | `npx -y rea-agents@6.5.0 setup --client claude_code --yes` |
+| Vibe-Trading | 금융 리서치 MCP (백테스트·시세, 키 없이 무료). 첫 실행 1~2분 | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | `uv tool install vibe-trading-ai --python 3.12` → `claude mcp add vibe-trading --scope user -- vibe-trading-mcp` |
 | ego lite | `ego-browser` 명령과 스킬을 제공하는 브라우저 앱 | — | 앱 설치 후 온보딩 |
 
 ```bash
@@ -180,6 +183,23 @@ conda 환경 `aiprj`(YOLO·얼굴 인식·FastAPI 프로젝트용)와 `py311`(Py
 | [SWE-smith](https://github.com/SWE-bench/SWE-smith) | 코딩 에이전트 학습 데이터 생성 | `pip install swesmith` |
 | [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | 자율 에이전트 플랫폼 (Docker) | `docker compose up -d` (`autogpt_platform/`) |
 
+### AI 금융·트레이딩 도구 — 출처: [@foodloss_otoko 트윗](https://x.com/foodloss_otoko/status/2114283666394476921)
+
+10개 모두 `C:\Users\403\Downloads\repos\finance-ai` 에 받아 둠(최신 커밋만, 합계 약 1.1GB). 투자 조언이 아닌 연구·학습용.
+
+| 도구 | ★ (10-26) | 하는 일 | 상태 |
+|---|---|---|---|
+| [aurelio-finance](https://github.com/LosaLosSantos/aurelio-finance) | 322 | 개인 자산관리 + AI 재무 상담, 내 PC에서 실행 | 받아 둠 |
+| [TradingAgents](https://github.com/TauricResearch/TradingAgents) | 114,861 | 분석가·강세파·약세파·리스크 관리 AI 팀이 토론 후 결정 | 받아 둠 (`pip install tradingagents`) |
+| [last30days-skill](https://github.com/mvanhorn/last30days-skill) | 65,483 | 최근 30일 화제 조사 | **플러그인 설치** |
+| [Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | 36,701 | 일상 문장 → 전략 → 백테스트 | **스킬 + MCP 설치** |
+| [nautilus_trader](https://github.com/nautechsystems/nautilus_trader) | 30,855 | 백테스트 전략을 그대로 실거래에 쓰는 Rust 엔진 | 받아 둠 |
+| [daily_stock_analysis](https://github.com/ZhuLinsen/daily_stock_analysis) | 67,064 | 매일 AI 시장 리포트를 Telegram·Discord·메일로 | 받아 둠 |
+| [freqtrade](https://github.com/freqtrade/freqtrade) | 55,958 | 코인 자동매매 봇 (+FreqAI 머신러닝) | 받아 둠 |
+| [OpenBB](https://github.com/openbq-org/OpenBB) | 74,719 | 주식·옵션·코인·경제지표 데이터 플랫폼, MCP 서버 제공 | 받아 둠 (`pip install openbb-mcp-server`) |
+| [FinceptTerminal](https://github.com/Fincept-Corporation/FinceptTerminal) | 33,124 | 무료판 블룸버그 터미널 + AI | 받아 둠 |
+| [QuantDinger](https://github.com/OpenByteInc/QuantDinger) | 13,130 | 아이디어 → 전략 → 백테스트 → 모의 → 실거래 | 받아 둠 |
+
 ### 게임 개발
 
 | 도구 | 하는 일 |
@@ -212,4 +232,5 @@ conda 환경 `aiprj`(YOLO·얼굴 인식·FastAPI 프로젝트용)와 `py311`(Py
 ### 받아 둔 학습 자료
 
 - [walkinglabs/learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering) — 하네스 엔지니어링 강의 ([한국어판](https://walkinglabs.github.io/learn-harness-engineering/ko/))
+- 금융·트레이딩 저장소 10개 — `Downloads\repos\finance-ai` (위 표)
 - [caramaschiHG/awesome-ai-agents-2026](https://github.com/caramaschiHG/awesome-ai-agents-2026) — AI 에이전트 목록

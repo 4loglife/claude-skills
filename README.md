@@ -2,7 +2,7 @@
 
 Claude Code 개인 스킬 모음입니다. 폴더 하나가 스킬 하나이고, `~/.claude/skills/` 아래에 두면 Claude Code가 인식합니다.
 
-플러그인 11개(blender-skills 포함), MCP 서버, 참고용 AI 도구까지 포함한 **전체 목록과 설치 링크는 [INVENTORY.md](INVENTORY.md)** 에 있습니다.
+플러그인 14개(blender-skills, last30days, 직접 만든 mod 포함), MCP 서버, 참고용 AI 도구까지 포함한 **전체 목록과 설치 링크는 [INVENTORY.md](INVENTORY.md)** 에 있습니다.
 
 ## 새 PC에 설치
 
@@ -27,6 +27,7 @@ cp -r ~/claude-skills/*/ ~/.claude/skills/
 | gpt-researcher | GPT Researcher 코드 개발용 지식 | [assafelovic/gpt-researcher](https://github.com/assafelovic/gpt-researcher) | Apache-2.0 |
 | harness-creator | AGENTS.md·CLAUDE.md 등 에이전트 하네스 생성·점검 | [walkinglabs/learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering) | MIT |
 | harness-checklist | Learn Harness Engineering 강의 기반 단계별 하네스 체크리스트 (직접 만듦) | [walkinglabs/learn-harness-engineering](https://walkinglabs.github.io/learn-harness-engineering/ko/) | MIT |
+| vibe-trading | 금융 리서치 툴킷 스킬 (MCP 본체는 `uv tool install vibe-trading-ai`) | [HKUDS/Vibe-Trading](https://github.com/HKUDS/Vibe-Trading) | MIT |
 | xvary-stock-research | 미국 주식 `/analyze`, `/score`, `/compare` (SEC EDGAR) | [xvary-research/claude-code-stock-analysis-skill](https://github.com/xvary-research/claude-code-stock-analysis-skill) | MIT |
 
 각 폴더에 원본 라이선스 파일을 그대로 넣었습니다. 준비물:
