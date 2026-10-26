@@ -13,6 +13,7 @@
 | 플러그인 — 모든 프로젝트 | 7개 (스킬 약 190개) | 🔗 마켓플레이스에서 설치 |
 | 플러그인 — 특정 프로젝트 | 4개 | 🔗 |
 | MCP 서버 (직접 등록) | 2개 (earshot, REA) + 플러그인 MCP 2개 (blender, cad) | 🔗 |
+| 파이썬 패키지 (직접 설치) | 8개 + earshot 가상환경 | 🔗 `pip install` |
 | 참고용 AI 도구 | 50여 개 | 설치 안 함 |
 
 명령은 Git Bash 기준입니다. 플러그인 명령은 Claude Code 안에서 `/plugin ...`으로 실행해도 됩니다.
@@ -111,6 +112,38 @@ claude mcp add earshot --scope user -e EARSHOT_THREADS=3 -- "$HOME/tools/earshot
 
 새 PC에서 같은 계정으로 로그인하면 그대로 따라옵니다. 따로 설치할 것 없음.
 Gmail · Google Calendar · Google Drive · Claude Docs · higgsfield · Figma · 법률 플러그인(commercial/privacy/ai-governance/corporate/ip/employment-legal, law-student, legal-builder-hub, cocounsel-legal) · PDF.net · 유튜브 · Unity MCP(계정 커넥터)
+
+---
+
+## 3-1. 파이썬 패키지
+
+패키지는 저장소에 들어 있지 않습니다. 새 PC에서 아래 명령으로 다시 설치하세요. 기준: 기본 Python 3.14 (`python -m pip`).
+
+### 스킬·AI 도구가 쓰는 것
+
+| 패키지 | 버전 | 쓰는 곳 | 설치 |
+|---|---|---|---|
+| requests | 2.34.2 | xvary-stock-research의 `tools/edgar.py`, `tools/market.py` | `python -m pip install requests` |
+| ollama | 0.6.3 | 로컬 모델(Ollama)을 파이썬에서 호출 | `python -m pip install ollama` |
+| raganything | 1.4.3 | [RAG-Anything](https://github.com/HKUDS/RAG-Anything) — PDF·이미지·표까지 다루는 멀티모달 RAG (MinerU 문서 파서 포함) | `python -m pip install raganything` |
+| datasets | 5.1.0 | [Hugging Face datasets](https://github.com/huggingface/datasets) — 데이터셋 내려받기 | `python -m pip install datasets` |
+| earshot | 0.3.0 | earshot MCP 본체. 기본 파이썬이 아니라 **전용 가상환경** `~/tools/earshot/.venv` 에 설치 | 위 3장 earshot 명령 |
+
+### 그 밖에 기본 파이썬에 설치된 것
+
+| 패키지 | 버전 | 용도 |
+|---|---|---|
+| gs_quant | 2.2.1 | [Goldman Sachs 퀀트 툴킷](https://github.com/goldmansachs/gs-quant) |
+| TA-Lib | 0.8.2 | [기술적 분석 지표](https://github.com/TA-Lib/ta-lib-python) (Windows는 휠로 설치) |
+| rl_accel | 0.9.1 | ReportLab PDF 가속 모듈 |
+
+```bash
+python -m pip install requests ollama raganything datasets gs_quant TA-Lib
+```
+
+### 목록에 넣지 않은 것
+
+conda 환경 `aiprj`(YOLO·얼굴 인식·FastAPI 프로젝트용)와 `py311`(PyTorch CUDA)은 특정 프로젝트 전용이라 이 목록에서 뺐습니다. 위 표에는 직접 설치한 패키지만 적었고, 그 패키지들이 끌고 온 의존성(전체 183개)은 함께 설치되므로 따로 적지 않았습니다.
 
 ---
 
