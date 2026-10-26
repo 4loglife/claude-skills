@@ -56,6 +56,7 @@ curl -sL -o ~/.claude/skills/arena/SKILL.md https://raw.githubusercontent.com/cu
 | 플러그인 | 하는 일 | 마켓플레이스 저장소 | 설치 |
 |---|---|---|---|
 | gamedev | Godot·Unity·Unreal·Roblox 등 게임 개발 스킬 90여 개 | [gamedev-skills/awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) | `claude plugin marketplace add gamedev-skills/awesome-gamedev-agent-skills` → `claude plugin install gamedev@awesome-gamedev-agent-skills` |
+| blender-skills | Blender 테크니컬 아트 스킬 94개 (director가 자동 라우팅, Blender MCP로 직접 조작) | [arjun988/blender-skills](https://github.com/arjun988/blender-skills) (MIT) | `claude plugin marketplace add arjun988/blender-skills` → `claude plugin install blender-skills@blender-skills --scope user` · Blender + [BlenderMCP 애드온](https://github.com/ahujasid/blender-mcp) 필요 |
 | text-to-cad | 파라메트릭 CAD, STEP/STL/DXF, 3D 프린팅 슬라이스 (MCP 포함) | [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | `claude plugin marketplace add earthtojake/text-to-cad#latest` → `claude plugin install text-to-cad@earthtojake` → `uvx cadgen telemetry off` |
 | imozuru | 모르는 분야를 용어·사람·원문 순으로 파고드는 리서치 | [MaryCache/imozuru](https://github.com/MaryCache/imozuru) | `claude plugin marketplace add MaryCache/imozuru` → `claude plugin install imozuru@imozuru` |
 | watch | 영상 URL을 받아 프레임·자막으로 내용 파악 | [bradautomates/claude-video](https://github.com/bradautomates/claude-video) | `claude plugin marketplace add bradautomates/claude-video` → `claude plugin install watch@claude-video` |
