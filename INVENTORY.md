@@ -10,7 +10,7 @@
 | 구분 | 개수 | 저장소에 포함 |
 |---|---|---|
 | 개인 스킬 | 17개 (`synced` 제외) | 11개 ✅ · 6개 🔗 |
-| 플러그인 — 모든 프로젝트 | 11개 (스킬 약 190개 + 직접 만든 mod 3개) | 🔗 마켓플레이스에서 설치 |
+| 플러그인 — 모든 프로젝트 | 12개 (스킬 약 190개 + 직접 만든 mod 3개) | 🔗 마켓플레이스에서 설치 |
 | 플러그인 — 특정 프로젝트 | 4개 | 🔗 |
 | MCP 서버 (직접 등록) | 3개 (earshot, REA, Vibe-Trading) + 플러그인 MCP 2개 (blender, cad) | 🔗 |
 | 파이썬 패키지 (직접 설치) | 8개 + earshot 가상환경 | 🔗 `pip install` |
@@ -67,6 +67,7 @@ curl -sL -o ~/.claude/skills/arena/SKILL.md https://raw.githubusercontent.com/cu
 
 | 플러그인 | 버전 · 설치일 | 하는 일 | 마켓플레이스 저장소 | 설치 |
 |---|---|---|---|---|
+| switchboard | v0.3.3 · 10-26 | 서브에이전트별 모델·비용 표시 mod (`/route`). picker를 켜면 모델 자동 선택(유료 키) | [hamzafer/claude-code-mods](https://github.com/hamzafer/claude-code-mods) (MIT, mod 25개 모음) | `claude plugin marketplace add hamzafer/claude-code-mods` → `claude plugin install switchboard@claude-code-mods --scope user` |
 | last30days | v3.30.0 · 10-26 | Reddit·X·YouTube·Polymarket 등에서 최근 30일 여론 조사 (`/last30days 주제`) | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) (MIT) | `claude plugin marketplace add mvanhorn/last30days-skill` → `claude plugin install last30days@last30days-skill --scope user` |
 | ollama-status · crypto-ticker · coin-board | v0.1.0 · 10-26 | 직접 만든 mod: Ollama 상태줄 (`/ollama`), 코인 시세 상태줄 (`/coin`), 코인 시세 옆 패널 (`/coinboard`) | 로컬 폴더 `C:\Users\403\claude-mods` (마켓플레이스 `my-mods`) | `claude plugin marketplace add <claude-mods 폴더>` → `claude plugin install ollama-status@my-mods --scope user`, `crypto-ticker@my-mods`, `coin-board@my-mods` 동일 |
 | blender-skills | v1.3.0 · 10-26 | Blender 테크니컬 아트 스킬 94개. director가 자동 라우팅하고 Blender MCP로 직접 조작 | [arjun988/blender-skills](https://github.com/arjun988/blender-skills) (MIT) | `claude plugin marketplace add arjun988/blender-skills` → `claude plugin install blender-skills@blender-skills --scope user` · Blender + [BlenderMCP 애드온](https://github.com/ahujasid/blender-mcp) 필요 |
