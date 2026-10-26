@@ -24,6 +24,7 @@ cp -r ~/claude-skills/*/ ~/.claude/skills/
 | real-sound | 영상에 실제 녹음으로 사운드트랙 입히기 | [Leonxlnx/earshot](https://github.com/Leonxlnx/earshot) | MIT |
 | gpt-researcher | GPT Researcher 코드 개발용 지식 | [assafelovic/gpt-researcher](https://github.com/assafelovic/gpt-researcher) | Apache-2.0 |
 | harness-creator | AGENTS.md·CLAUDE.md 등 에이전트 하네스 생성·점검 | [walkinglabs/learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering) | MIT |
+| harness-checklist | Learn Harness Engineering 강의 기반 단계별 하네스 체크리스트 (직접 만듦) | [walkinglabs/learn-harness-engineering](https://walkinglabs.github.io/learn-harness-engineering/ko/) | MIT |
 | xvary-stock-research | 미국 주식 `/analyze`, `/score`, `/compare` (SEC EDGAR) | [xvary-research/claude-code-stock-analysis-skill](https://github.com/xvary-research/claude-code-stock-analysis-skill) | MIT |
 
 각 폴더에 원본 라이선스 파일을 그대로 넣었습니다. 준비물:
