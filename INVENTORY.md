@@ -191,6 +191,7 @@ conda 환경 `aiprj`(YOLO·얼굴 인식·FastAPI 프로젝트용)와 `py311`(Py
 
 | 도구 | ★ (10-26) | 하는 일 | 상태 |
 |---|---|---|---|
+| [OpenAlice](https://github.com/TraderAlice/OpenAlice) | 7,378 | AI 트레이딩 오케스트레이터 데스크톱 앱: 에이전트 + 시장 데이터 + 캔들 차트 + 예약 리서치 + 매매 승인 (AGPL-3.0) | 안 받음. 스킬 14개·MCP는 앱 실행 중에만 동작 |
 | [aurelio-finance](https://github.com/LosaLosSantos/aurelio-finance) | 322 | 개인 자산관리 + AI 재무 상담, 내 PC에서 실행 | 받아 둠 |
 | [TradingAgents](https://github.com/TauricResearch/TradingAgents) | 114,861 | 분석가·강세파·약세파·리스크 관리 AI 팀이 토론 후 결정 | 받아 둠 (`pip install tradingagents`) |
 | [last30days-skill](https://github.com/mvanhorn/last30days-skill) | 65,483 | 최근 30일 화제 조사 | **플러그인 설치** |
