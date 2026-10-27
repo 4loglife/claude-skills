@@ -203,6 +203,30 @@ conda 환경 `aiprj`(YOLO·얼굴 인식·FastAPI 프로젝트용)와 `py311`(Py
 | [FinceptTerminal](https://github.com/Fincept-Corporation/FinceptTerminal) | 33,124 | 무료판 블룸버그 터미널 + AI | 받아 둠 |
 | [QuantDinger](https://github.com/OpenByteInc/QuantDinger) | 13,130 | 아이디어 → 전략 → 백테스트 → 모의 → 실거래 | 받아 둠 |
 
+### X에서 본 레포 모음 (2026-10-27)
+
+출처 트윗: [@dopamine_crypto](https://x.com/dopamine_crypto/status/2114937635059716561) · [@bkdgiffug ①](https://x.com/bkdgiffug/status/2113051455699476744) · [@bkdgiffug ②](https://x.com/bkdgiffug/status/2112918833463771346) · [@bkdgiffug ③](https://x.com/bkdgiffug/status/2114808281872879757) · [@haoge6699](https://x.com/haoge6699/status/2113175774681305471) · [@BTCqzy1](https://x.com/BTCqzy1/status/2114689315469136222) · [@MarioNawfal](https://x.com/MarioNawfal/status/2114775314572157182) · [@eternityspring](https://x.com/eternityspring/status/2114569043743318492). 별 수는 2026-10-27 기준.
+
+**Claude 스킬·플러그인 포함 (바로 설치 가능)**
+
+| 저장소 | ★ | 하는 일 | 어디서·어떻게 받나 |
+|---|---|---|---|
+| [blader/humanizer](https://github.com/blader/humanizer) | 61,285 | AI가 쓴 글을 내용은 그대로 두고 사람이 쓴 것처럼 교정 (위키백과 AI 글 판별 가이드 기반 26개 패턴, 영어 기준) (MIT) | `claude plugin marketplace add blader/humanizer` → `claude plugin install humanizer@humanizer` → `/humanizer:humanizer` |
+| [wbh604/UZI-Skill](https://github.com/wbh604/UZI-Skill) | 7,427 | 투자 대가 66명 관점·22개 데이터·퀀트 규칙 180개로 종목 하나를 깊게 분석, A주·홍콩·미국 (MIT, 스킬 5개) | `claude plugin marketplace add wbh604/UZI-Skill` → `claude plugin install stock-deep-analyzer@uzi-skill` |
+| [StarTrail-org/PixelRAG](https://github.com/StarTrail-org/PixelRAG) | 10,475 | 문서를 스크린샷으로 찍어 비전 모델로 검색하는 RAG + Claude가 화면을 "보고" 읽는 pixelbrowse 플러그인 (Apache-2.0) | `claude plugin marketplace add StarTrail-org/PixelRAG` → `claude plugin install pixelbrowse@pixelrag-plugins`, 라이브러리는 `pip install pixelrag` |
+| [eternityspring/shuohao-skills](https://github.com/eternityspring/shuohao-skills) | 5,493 | AI 숏드라마 제작: 인물 → 개요 → 아트 설정 → 대본 → 콘티 (Apache-2.0, 스킬 7개, 중국어) | `git clone https://github.com/eternityspring/shuohao-skills.git` → `cp -r shuohao-skills/skills/* ~/.claude/skills/` |
+
+**프로그램·라이브러리**
+
+| 저장소 | ★ | 하는 일 | 어디서·어떻게 받나 |
+|---|---|---|---|
+| [OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM) | 40,720 | TTS·음성 복제 VoxCPM2, 글로 목소리 설계, 48kHz (Apache-2.0) | `pip install voxcpm` |
+| [StarTrail-org/LEANN](https://github.com/StarTrail-org/LEANN) | 13,465 | 저장 공간 97% 줄인 로컬 RAG (201GB → 6GB), GPU 불필요 (MIT) | `uv pip install leann` |
+| [simonlin1212/Vibe-Research](https://github.com/simonlin1212/Vibe-Research) | 3,000 | A주·홍콩·미국 주식 리서치 작업대, 데이터 엔드포인트 168개, 자연어 백테스트 (MIT). 내장 스킬은 앱 전용 | `git clone https://github.com/simonlin1212/Vibe-Research.git` 후 README 참고 |
+| [fasiondog/hikyuu](https://github.com/fasiondog/hikyuu) | 3,648 | A주 퀀트·백테스트 프레임워크 (C++/Python, Apache-2.0) | `pip install hikyuu` |
+| [AI4Finance-Foundation/FinRL](https://github.com/AI4Finance-Foundation/FinRL) | 16,830 | 강화학습 트레이딩 연구·교육 프레임워크 (MIT) | `git clone` → `pip install -e .` |
+| [AI4Finance-Foundation/FinRL-Trading](https://github.com/AI4Finance-Foundation/FinRL-Trading) | 3,867 | FinRL-X: 모듈형, 모의·실거래용 후속작 (Apache-2.0) | `git clone` → `pip install -r requirements.txt` |
+
 ### 게임 개발
 
 | 도구 | 하는 일 |
