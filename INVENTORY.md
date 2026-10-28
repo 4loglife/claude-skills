@@ -261,3 +261,4 @@ conda 환경 `aiprj`(YOLO·얼굴 인식·FastAPI 프로젝트용)와 `py311`(Py
 - [walkinglabs/learn-harness-engineering](https://github.com/walkinglabs/learn-harness-engineering) — 하네스 엔지니어링 강의 ([한국어판](https://walkinglabs.github.io/learn-harness-engineering/ko/))
 - 금융·트레이딩 저장소 10개 — `Downloads\repos\finance-ai` (위 표)
 - [caramaschiHG/awesome-ai-agents-2026](https://github.com/caramaschiHG/awesome-ai-agents-2026) — AI 에이전트 목록
+- [kritishmohapatra/100_Days_100_IoT_Projects](https://github.com/kritishmohapatra/100_Days_100_IoT_Projects) — IoT 프로젝트 100개 (ESP32·ESP8266·라즈베리파이 피코, MicroPython), 프로젝트마다 코드·회로도·Wokwi 시뮬레이션 포함, 64번은 Groq AI + 텔레그램으로 GPIO 제어 (★ 약 1.5k)
